@@ -1,6 +1,26 @@
 #include<iostream>
 #include<stack>
 #include<queue>
+// class Node{
+//     public:
+//     int val;
+//     Node* next;
+//     Node* haed;
+//     Node* tail;
+//     public:
+//     Node(int val){
+//         this->next=next;
+//         this->val=val;
+//           haed=NULL;
+//           tail=NULL;
+//     }
+//      void enQueue(){
+//         Node* temp=new Node(val);
+//         head=temp;
+//     }
+   
+   
+// };
 using namespace std;
 void display(queue<int>&q){
     int n=q.size();

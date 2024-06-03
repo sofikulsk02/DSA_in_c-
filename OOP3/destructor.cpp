@@ -1,0 +1,1 @@
+//when object goes outoff scope  (ilaka hai){}
