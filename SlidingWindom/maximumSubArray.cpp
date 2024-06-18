@@ -20,9 +20,7 @@ int main(){
         }
         preSum=currSum;
          i++;
-            j++;
-        
-
+         j++;
     }
     cout<<maxSum<<endl;
         cout<<maxIdx<<endl;
