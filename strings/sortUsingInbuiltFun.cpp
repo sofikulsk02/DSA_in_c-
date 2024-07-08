@@ -7,5 +7,4 @@ int main(){
     cin>>s;
     sort(s.begin(),s.end());//it will depends on the ascii value
     cout<<s;
-
 }

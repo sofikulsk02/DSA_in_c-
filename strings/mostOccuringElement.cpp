@@ -22,7 +22,7 @@ int main(){
           if(n==1)return str[0];
         else if (v[i]==v[i+1])
         {
-            /* code */
+            
         }
         
     }

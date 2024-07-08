@@ -1,3 +1,5 @@
-string temp=s[i];
-        //   s[i]=s[4-i];
-        //   s[4-i]=temp;
+
+    int count=0;
+    
+    for(int i=0; i<n; i++){
+        if(n==1) {
