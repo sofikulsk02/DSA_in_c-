@@ -20,19 +20,19 @@ void displayTree(TreeNode* root){
 int sumOfTree(TreeNode* root){
   if(root==NULL) return 0;
   return root->val+ sumOfTree(root->left)+sumOfTree(root->right);
-}
+};
 int sizeOfTree(TreeNode* root){
   if(root==NULL) return 0;
   return 1+sizeOfTree(root->left)+sizeOfTree(root->right);
-}
+};
 int maxOfTree(TreeNode* root){
   if(root==NULL) return INT16_MIN;
     return max(root->val, max(maxOfTree(root->left),maxOfTree(root->right)));
-}
+};
 int levels(TreeNode* root){
   if(root==NULL) return 0;
   return 1+levels(root->left)+levels(root->right);
-}
+};
 int main(){
     TreeNode* a=new TreeNode(10);
     TreeNode* b=new TreeNode(20);
@@ -48,5 +48,8 @@ int main(){
     c->left=f;
     c->right=g;
     displayTree(a);
-   
+    cout<<endl;
+   cout<<sumOfTree(a)<<endl;
+   cout<<maxOfTree(a)<<endl;
+   cout<<sizeOfTree(a)<<endl;
 }
