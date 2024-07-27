@@ -12,4 +12,7 @@ int main(){
     cout<<str<<endl;
     str.pop_back();
     cout<<str;
+    str.push_back('e');
+    str.push_back('t');
+    cout<<str;
 }
