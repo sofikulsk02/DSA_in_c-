@@ -46,6 +46,14 @@ class Linkedlist{
             }
             cout<<endl;
         }
+        void insertAtIdx(int idx,int val){
+            Node* temp=new Node(val);
+            if(size==0) insertHead(val);
+            else if(idx==size) insertAtEnd(val);
+            else{
+
+            }
+        }
 };
  void display(Node* head){
             Node* temp=head;
@@ -65,26 +73,25 @@ int size(Node* head){
     return count;
 }
 int main(){
-       Node* a=new Node(10);
-       Node* b=new Node(20);
-       Node* c=new Node(30);
-       Node* d=new Node(40);
-       Node* e=new Node(50);
-       Node* f=new Node(60);
-       Node* g=new Node(70);
-       Node* h=new Node(80);
-       a->next=b;
-       b->next=c;
-       c->next=d;
-       d->next=e;
-       e->next=f;
-       f->next=g;
-       g->next=h;
-        display(a);
-        cout<<size(a);
+    //    Node* a=new Node(10);
+    //    Node* b=new Node(20);
+    //    Node* c=new Node(30);
+    //    Node* d=new Node(40);
+    //    Node* e=new Node(50);
+    //    Node* f=new Node(60);
+    //    Node* g=new Node(70);
+    //    Node* h=new Node(80);
+    //    a->next=b;
+    //    b->next=c;
+    //    c->next=d;
+    //    d->next=e;
+    //    e->next=f;
+    //    f->next=g;
+    //    g->next=h;
+    //     display(a);
+    //     cout<<size(a);
         Linkedlist ll;
         ll.insertHead(10);
-        ll.insertAtEnd(20);
         ll.show();
 }
        
