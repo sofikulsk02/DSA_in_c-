@@ -10,7 +10,7 @@ void reversePart(int i,int j,vector<int>&v){
         j--;
      }
 }
-void display(vector<int>&v,int n){
+void display(vector<int>&v,int n){ 
     for(int i=0; i<n;i++){
         cout<<v[i]<<" ";
     }
