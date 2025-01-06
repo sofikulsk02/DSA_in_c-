@@ -52,7 +52,7 @@ class Node{
 };
 void display(Node* a){
     Node* temp=a;
-    while(temp!=NULL){
+    while(temp!=NULL){  //! constructor is for initializing the class variales
       cout<<temp->val<<" ";
       temp=temp->next;
     }
@@ -70,7 +70,7 @@ void display(Node* a){
      if(head==NULL) return;
      revDisplay(head->next);
      cout<<head->val<<" ";
-  }
+}
       int main(){
          Node* a=new Node(10);
          Node* b=new Node(20);

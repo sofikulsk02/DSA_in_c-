@@ -19,6 +19,27 @@ void nThLevel(Node* root,int currLevel,int level){
     nThLevel(root->left,currLevel+1,level);
     nThLevel(root->right,currLevel+1,level);
 }
+void nThLevelRev(Node* root,int currLevel,int level){
+    if(root==NULL) return;
+    if(currLevel==level){
+        cout<<root->val<<" ";
+        return;
+    }
+    nThLevelRev(root->right,currLevel+1,level);
+     nThLevelRev(root->left,currLevel+1,level);
+}
+void levelOrderQueue(Node* root){   //* this code will print the nodes from left to right
+       queue<Node*>q;
+       q.push(root);
+       while(q.size()>0){
+        Node* temp=q.front();
+        q.pop();
+        cout<<temp->val<<" ";
+        if(!temp->left==NULL) q.push(temp->left);
+        if(!temp->right==NULL) q.push(temp->right);
+       }
+       cout<<endl;   
+}
 int main(){
    Node* a=new Node(5);
     Node* b=new Node(4);
@@ -32,4 +53,8 @@ int main(){
     b->right=e;
     c->left=f;
     nThLevel(a,1,3);
+    cout<<endl;
+    nThLevelRev(a,1,3);
+    cout<<endl;
+    levelOrderQueue(a);
 }
