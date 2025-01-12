@@ -76,24 +76,46 @@
 // }
 
 
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//   string str;
+//   getline(cin,str);
+//   vector<int>arr(26,0);
+//   for(int i=0; i<26; i++){
+//     int ascii=(int)str[i]-97;
+//     arr[ascii]++;
+//   }
+//   int mx=0;
+//   for(int i=0; i<26; i++){
+//     if(arr[i]>mx) mx=arr[i];
+//   }
+//   for(int i=0; i<26; i++){
+//     if(arr[i]==mx){
+//       char ch=(char)(97+i);
+//       cout<<ch<<"->"<<mx;
+//     }
+// }
+// }
+
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-  string str;
-  getline(cin,str);
-  vector<int>arr(26,0);
-  for(int i=0; i<26; i++){
-    int ascii=(int)str[i]-97;
-    arr[ascii]++;
+  string s;
+  getline(cin,s);
+  vector<int>ans(26,0);
+  for(int i=0; i<s.size();i++){
+    int ascii=(int)s[i]-97;
+    ans[ascii]++;
   }
-  int mx=0;
-  for(int i=0; i<26; i++){
-    if(arr[i]>mx) mx=arr[i];
+  int mx=INT_MIN;
+  for(int i=0; i<26;i++){
+    if(ans[i]>mx) mx=ans[i];
   }
-  for(int i=0; i<26; i++){
-    if(arr[i]==mx){
-      char ch=(char)(97+i);
+  for(int i=0; i<26;i++){
+    if(mx==ans[i]){
+      char ch=(char)(i+97);
       cout<<ch<<"->"<<mx;
     }
-}
+  }
 }
