@@ -28,6 +28,18 @@ void reverse(queue<int>&q){
         q.push(x);
     }
 }
+void reverse2(queue<int>&q){
+          int n=q.size();
+          stack<int>st;
+          while(!q.empty()){
+            st.push(q.front()); 
+            q.pop();
+          }
+          while(!st.empty()){
+            q.push(st.top());
+            st.pop();
+          }
+}
 int main(){
     queue<int>q;
     q.push(10);
@@ -38,6 +50,8 @@ int main(){
     display(q);
     // q.pop();
     // display(q);
-    reverse(q);
+    // reverse(q);
+    display(q);
+    reverse2(q);
     display(q);
 }

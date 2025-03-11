@@ -31,6 +31,16 @@ void display(queue<int>&q){
     q.push(x);
     }
 }; 
+void removeAtEven(queue<int>&q){
+    int n=q.size();
+    for(int i=0;i<n;i++){
+        int x=q.front();
+        if(i%2!=0){
+            q.push(x);
+        }
+        q.pop();
+    }
+}
 void removeFromEven(queue<int>&q){
     int n=q.size();
     stack<int>st;
