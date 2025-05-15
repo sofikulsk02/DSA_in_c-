@@ -46,7 +46,7 @@ class Linkedlist{
             Node* t=new Node(val);
             Node* temp=head;
               if(idx<0 || idx >size){
-           cout<<"Invalid index"<<endl;
+           cout<<"Invalid index"<<endl; 
         }
         else if(idx==0) insertAtHead(val);
     

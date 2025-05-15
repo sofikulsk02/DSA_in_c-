@@ -17,5 +17,8 @@ int main(){
     string s;
     getline(cin,s);
     cout<<s;
-
+     cout<<endl;
+    string str;
+    getline(cin,str);
+    cout<<str;
 }

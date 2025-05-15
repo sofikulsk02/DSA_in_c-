@@ -18,12 +18,17 @@ int main(){
     int n=v.size();
     int count=1; 
     int maxCount=1;
-    for(int i=0; i<n;i++){
-          if(n==1)return str[0];
-        else if (v[i]==v[i+1])
-        {
-            /* code */
-        }
-        
+    for(int i=1; i<n;i++){
+         if(v[i]==v[i-1]) count++;
+         else count=1;
+         maxCount=max(maxCount,count);
+    }
+     count=1;
+    for(int i=1; i<n;i++){
+         if(v[i]==v[i-1]) count++;
+         else count=1;
+         if(maxCount==count){
+            cout<<v[i]<<"->"<<maxCount;
+         } 
     }
 }

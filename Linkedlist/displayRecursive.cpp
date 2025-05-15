@@ -13,7 +13,6 @@ void displayRec(Node * a){
     if(a==NULL) return ;
     cout<<a->val<<" ";
     displayRec(a->next);
-
 }
 int main(){
     Node* a=new Node(10);
