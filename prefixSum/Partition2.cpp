@@ -13,5 +13,5 @@ int main(){
         }
     }
     if(idx!=-1) cout<<"The array can be partitioned into two parts from index"<<idx;
-    else cout<<"The partition can't be possible";
+    else cout<<"The partition can't be possible because no such index found";
 }
