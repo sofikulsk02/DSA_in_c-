@@ -51,3 +51,11 @@ int main() {
     cout << ans;  // Output: 26 (from 26 & 27 = 26)
     return 0;
 }
+
+// int nsize=0;
+// for(int i=0; i<n;i++){
+//     if(arr[i]!=0){
+//         nsize++;
+//     }
+// }
+// return combination(nszie,2);   this return the no of pair
