@@ -5,7 +5,7 @@ bool checkSum(int arr[], int n,int k){
         int sum=0;
         for(int j=0; j<n;j++){
             if((i>>j&1)==1){
-                //the bit is set we have to consider that 
+                //the bit is set we have to consider that
                sum+=arr[j];
             }
         }
