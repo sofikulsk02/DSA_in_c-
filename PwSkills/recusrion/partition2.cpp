@@ -13,18 +13,18 @@ int ways(string s,int i,unordered_set<string>&hs,vector<int>&dp){
                 c+=ways(s,j+1,hs,dp);
             }
         }
-        dp[i]=c;                                                                                
+        dp[i]=c;
     }
     return dp[i];
 }
 int solve(vector<string>arr,string s){
+    vector<int>dp(s.length(),-1);
     unordered_set<string>hs;
-    int n=s.length();
-    vector<int>dp(n+1,-1);
     for(int i=0;i<arr.size();i++){
         hs.insert(arr[i]);
     }
-    return ways(s,0,hs,dp);
+    int ans=ways(s,0,hs,dp);
+    return ans;
 }
 int main(){
     vector<string> dict1 = {"apple", "pen", "applepen", "pine", "pineapple"};

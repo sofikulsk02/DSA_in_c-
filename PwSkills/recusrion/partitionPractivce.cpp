@@ -1,30 +1,32 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<vector>
+#include<unordered_set>
 using namespace std;
 int ways(string s,int i,unordered_set<string>&hs,vector<int>&dp){
-    int n=s.length();
-    if(i==n) return 1;
-    if(dp[i]!=-1) return dp[i];
-    else{
-        int c=0;
+      int n=s.length();
+      if(i==n) return 1;
+      if(dp[i]!=-1) return dp[i];
+      else{
+        int count=0;
         string temp="";
         for(int j=i;j<n;j++){
             temp+=s[j];
             if(hs.find(temp)!=hs.end()){
-                c+=ways(s,j+1,hs,dp);
+                count+=ways(s,j+1,hs,dp);
             }
         }
-        dp[i]=c;                                                                                
-    }
-    return dp[i];
+        dp[i]=count;
+      }
+      return dp[i];
 }
 int solve(vector<string>arr,string s){
     unordered_set<string>hs;
-    int n=s.length();
-    vector<int>dp(n+1,-1);
+    vector<int>dp(s.length(),-1);
     for(int i=0;i<arr.size();i++){
         hs.insert(arr[i]);
     }
-    return ways(s,0,hs,dp);
+    int ans=ways(s,0,hs,dp);
+    return ans;
 }
 int main(){
     vector<string> dict1 = {"apple", "pen", "applepen", "pine", "pineapple"};

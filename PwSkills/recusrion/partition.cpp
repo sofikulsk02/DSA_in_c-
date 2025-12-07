@@ -27,7 +27,7 @@ int solve(vector<string> arr, string s){
       return ans;
 }
 int main(){
-   vector<string> dict1 = {"apple", "pen", "applepen", "pine", "pineapple"};
+    vector<string> dict1 = {"apple", "pen", "applepen", "pine", "pineapple"};
     string s1 = "pineapplepenapple";
     int result1 = solve(dict1, s1);
     cout << "Test 1: " << result1 << " (Expected: 3)" << endl;
