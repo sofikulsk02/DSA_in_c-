@@ -1,27 +1,35 @@
-#include<iostream>
+#include <iostream>
+#include <vector>
 using namespace std;
-int main(){
+
+int main() {
     int n;
-    cout<<"Enter the array size:";
-    cin>>n;
-    int arr[n];
-    cout<<"Enter the array elements:";
-    for(int i=0; i<n; i++){
-        cin>>arr[i];
+    cout << "Enter the array size: ";
+    if (!(cin >> n) || n <= 0) {
+        cerr << "Invalid size\n";
+        return 1;
     }
-    bool flag=false;
+
+    vector<int> arr(n);
+    cout << "Enter the array elements (space separated): ";
+    for (int i = 0; i < n; ++i) {
+        cin >> arr[i];
+    }
+
     int x;
-    cout<<"Enter the target elements:";
-    cin>>x;
-    for(int i=0; i<n; i++){
-        if(x==arr[i]){
-            flag=true;
+    cout << "Enter the target element: ";
+    cin >> x;
+
+    bool flag = false;
+    for (int i = 0; i < n; ++i) {
+        if (x == arr[i]) {
+            flag = true;
+            break;
         }
     }
-    if(flag==true){
-        cout<<"Element found";
-    }
-    else{
-        cout<<"Error element not found";
-    }
+
+    if (flag) cout << "Element found\n";
+    else cout << "Element not found\n";
+
+    return 0;
 }

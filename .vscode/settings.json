@@ -6,5 +6,25 @@
     "chrono": "cpp",
     "algorithm": "cpp",
     "iosfwd": "cpp"
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "args": ["--login"],
+      "icon": "terminal-bash"
+    }
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMapByFileExtension": {
+    ".cpp": "cmd /c g++ \"$file\" -o \"$fileDirname\\$fileNameWithoutExt.exe\" && \"$fileDirname\\$fileNameWithoutExt.exe\""
   }
 }
