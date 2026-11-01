@@ -4,7 +4,7 @@
 
 a data raw structure
 
-### repsentation of graph ?
+### repsentation of graph?
 
 Nodes(vertex) and edges and weights
 
@@ -14,3 +14,5 @@ directed
 undirected
 weighted
 unweighted
+
+### complete graph, disconnected graph, cyclic graph, hamiltonian graph , pseudo graph
