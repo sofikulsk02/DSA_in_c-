@@ -27,3 +27,5 @@ int main(){
     vector<int>vis(6,0);
     cout<<isPath(graph,vis,1,4);
 }
+
+
