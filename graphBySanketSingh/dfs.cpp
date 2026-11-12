@@ -16,6 +16,15 @@ void bfs(int node,unordered_map<int,vector<int>>&graph,vector<int>&vis){
         }
     }
 }
+void display(unordered_map<int,vector<int>>&graph){
+        for(int i=0;i<graph.size();i++){
+               cout<<i<<"-->";
+               for(auto ele:graph[i]){
+                cout<<ele<<" ";
+               }
+               cout<<endl;
+        }
+}
 int main(){
     vector<vector<int>>edges={{1,2},{2,3},{3,4},{4,2},{1,4}};
     unordered_map<int,vector<int>>graph;
